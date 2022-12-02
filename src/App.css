@@ -26,6 +26,9 @@ body {
   align-items: center;
 }
 
+.StartPage {
+}
+
 .intro__page {
   display: flex;
   flex-direction: column;
