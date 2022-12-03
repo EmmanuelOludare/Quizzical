@@ -46,7 +46,6 @@ const QuizPage = () => {
           type:"multiple"
         }
       ]);
-  
       
       useEffect(() => {
         console.log("Effect ran")
@@ -63,6 +62,8 @@ const QuizPage = () => {
                 question={item.question}
                 correctAnswer={item.correct_answer}
                 inCorrectAnswers={item.incorrect_answers}
+                formData={formData}
+                handleChange={handleChange}
             />
         )
     })    
