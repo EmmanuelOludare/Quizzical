@@ -60,7 +60,7 @@ const QuestionsPage = (props) => {
         <Loading background="rgb(41,50,100)" />
       ) : (
         <form>
-          {score === 5 ? <Confetti width={width} height={height} style={{zIndex: 10}}/> : <></>}
+          {score < 5 ? <Confetti width={width} height={height} style={{zIndex: 10}}/> : <></>}
             {/* FIRST QUESTION */}
         <div className="question__page">
               <h4>{decode(questions[0].question)}</h4>
