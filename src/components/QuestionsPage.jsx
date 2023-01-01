@@ -30,6 +30,7 @@ const QuestionsPage = (props) => {
 
  const handleScoring = (event) => {
     event.preventDefault();
+    setCompleteAnswering(true);
     if (event.target.innerHTML === `Check answers`) {
       let scoreOne,scoreTwo,scoreThree,scoreFour,scoreFive;
       formData.firstQuestionOption  === questions[0].correct_answer ? scoreOne = 1 : scoreOne = 0;
@@ -51,7 +52,7 @@ const QuestionsPage = (props) => {
   }
       
     const isQuizComplete = questions.length !== 5;
-    const width = window.innerWidth;
+    const width = 650;
     const height =  window.innerHeight;
   
   return (
@@ -72,6 +73,7 @@ const QuestionsPage = (props) => {
                 id={decode(firstQuestionOptions[0])}
                 checked={formData.firstQuestionOption === decode(firstQuestionOptions[0])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(firstQuestionOptions[0])} className="option"
                 style={{
@@ -89,6 +91,7 @@ const QuestionsPage = (props) => {
                 id={decode(firstQuestionOptions[1])}
                 checked={formData.firstQuestionOption === decode(firstQuestionOptions[1])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(firstQuestionOptions[1])} className="option"
                 style={{
@@ -106,6 +109,7 @@ const QuestionsPage = (props) => {
                 id={decode(firstQuestionOptions[2])}
                 checked={formData.firstQuestionOption === decode(firstQuestionOptions[2])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(firstQuestionOptions[2])} className="option"
                 style={{
@@ -123,6 +127,7 @@ const QuestionsPage = (props) => {
                 id={decode(firstQuestionOptions[3])}
                 checked={formData.firstQuestionOption === decode(firstQuestionOptions[3])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(firstQuestionOptions[3])} className="option"
                 style={{
@@ -145,6 +150,7 @@ const QuestionsPage = (props) => {
                 id={decode(secondQuestionOptions[0])}
                 checked={formData.secondQuestionOption === decode(secondQuestionOptions[0])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(secondQuestionOptions[0])} className="option"
                 style={{
@@ -162,6 +168,7 @@ const QuestionsPage = (props) => {
                 id={decode(secondQuestionOptions[1])}
                 checked={formData.secondQuestionOption === decode(secondQuestionOptions[1])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(secondQuestionOptions[1])} className="option"
                 style={{
@@ -179,6 +186,7 @@ const QuestionsPage = (props) => {
                 id={decode(secondQuestionOptions[2])}
                 checked={formData.secondQuestionOption === decode(secondQuestionOptions[2])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(secondQuestionOptions[2])} className="option"
                 style={{
@@ -196,6 +204,7 @@ const QuestionsPage = (props) => {
                 id={decode(secondQuestionOptions[3])}
                 checked={formData.secondQuestionOption === decode(secondQuestionOptions[3])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(secondQuestionOptions[3])} className="option"
                 style={{
@@ -218,6 +227,7 @@ const QuestionsPage = (props) => {
                 id={decode(thirdQuestionOptions[0])}
                 checked={formData.thirdQuestionOption === decode(thirdQuestionOptions[0])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(thirdQuestionOptions[0])} className="option"
                 style={{
@@ -235,6 +245,7 @@ const QuestionsPage = (props) => {
                 id={decode(thirdQuestionOptions[1])}
                 checked={formData.thirdQuestionOption === decode(thirdQuestionOptions[1])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(thirdQuestionOptions[1])} className="option"
                 style={{
@@ -252,6 +263,7 @@ const QuestionsPage = (props) => {
                 id={decode(thirdQuestionOptions[2])}
                 checked={formData.thirdQuestionOption === decode(thirdQuestionOptions[2])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(thirdQuestionOptions[2])} className="option"
                 style={{
@@ -269,6 +281,7 @@ const QuestionsPage = (props) => {
                 id={decode(thirdQuestionOptions[3])}
                 checked={formData.thirdQuestionOption === decode(thirdQuestionOptions[3])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(thirdQuestionOptions[3])} className="option"
                 style={{
@@ -291,6 +304,7 @@ const QuestionsPage = (props) => {
                 id={decode(fourthQuestionOptions[0])}
                 checked={formData.fourthQuestionOption === decode(fourthQuestionOptions[0])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fourthQuestionOptions[0])} className="option"
                 style={{
@@ -308,6 +322,7 @@ const QuestionsPage = (props) => {
                 id={decode(fourthQuestionOptions[1])}
                 checked={formData.fourthQuestionOption === decode(fourthQuestionOptions[1])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fourthQuestionOptions[1])} className="option"
                 style={{
@@ -325,6 +340,7 @@ const QuestionsPage = (props) => {
                 id={decode(fourthQuestionOptions[2])}
                 checked={formData.fourthQuestionOption === decode(fourthQuestionOptions[2])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fourthQuestionOptions[2])} className="option"
                 style={{
@@ -342,6 +358,7 @@ const QuestionsPage = (props) => {
                 id={decode(fourthQuestionOptions[3])}
                 checked={formData.fourthQuestionOption === decode(fourthQuestionOptions[3])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fourthQuestionOptions[3])} className="option"
                 style={{
@@ -364,6 +381,7 @@ const QuestionsPage = (props) => {
                 id={decode(fifthQuestionOptions[0])}
                 checked={formData.fifthQuestionOption === decode(fifthQuestionOptions[0])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fifthQuestionOptions[0])} className="option"
                 style={{
@@ -381,6 +399,7 @@ const QuestionsPage = (props) => {
                 id={decode(fifthQuestionOptions[1])}
                 checked={formData.fifthQuestionOption === decode(fifthQuestionOptions[1])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fifthQuestionOptions[1])} className="option"
                 style={{
@@ -398,6 +417,7 @@ const QuestionsPage = (props) => {
                 id={decode(fifthQuestionOptions[2])}
                 checked={formData.fifthQuestionOption === decode(fifthQuestionOptions[2])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fifthQuestionOptions[2])} className="option"
                 style={{
@@ -415,6 +435,7 @@ const QuestionsPage = (props) => {
                 id={decode(fifthQuestionOptions[3])}
                 checked={formData.fifthQuestionOption === decode(fifthQuestionOptions[3])}
                 onChange={handleChange}
+                disabled={completeAnswering}
                 />
                 <label htmlFor={decode(fifthQuestionOptions[3])} className="option"
                 style={{
