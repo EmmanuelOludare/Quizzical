@@ -1,16 +1,24 @@
 body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #293264;
   background-color: #242424;
 }
 
-.QuizPage {
-  background-color: #f5f7fb;
-  max-width: 600px;
-  height: 600px;
+.App {
+  max-width: 650px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.start__page {
   padding: 2rem;
+  background-color: #f5f7fb;
   background-image: url("./Images/blobOne.svg"), url("./Images/blobTwo.svg");
   background-position: top right, bottom left;
   background-repeat: no-repeat, no-repeat;
@@ -24,9 +32,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.StartPage {
 }
 
 .intro__page {
@@ -58,4 +63,66 @@ body {
 .intro__page__button:hover {
   opacity: 0.9;
   margin-top: 6px;
+}
+
+.QuestionsPage {
+  padding: 2rem;
+  background-color: #f5f7fb;
+  background-image: url("./Images/blobOne.svg"), url("./Images/blobTwo.svg");
+  background-position: top right, bottom left;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.question__page {
+  border-bottom: 1px solid #dbdef0;
+  padding: 0.6rem 0 0.6rem 0;
+}
+
+.options {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7px;
+}
+
+.option {
+  background: transparent;
+  border: 1px solid #293264;
+  color: #293264;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  margin: 4px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + .option {
+  background: #d6dbf5;
+}
+
+.score__review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 1.2em;
+}
+
+.check__answers__button {
+  background-color: #293264;
+  color: #f5f7fb;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  border-color: #293264;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.check__answers__button:hover {
+  opacity: 0.9;
 }
