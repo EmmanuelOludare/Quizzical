@@ -26,17 +26,7 @@ const QuestionsPage = (props) => {
             [name] : value
         }
     })
-}  
-
-(() => {
-  Object.values(formData).every((answer) => {
-    if(answer === ""){
-      console.log("no")
-    }else{
-      console.log("yes")
-    }
-});
-})()
+}
 
  const handleScoring = (event) => {
     event.preventDefault();
@@ -61,8 +51,8 @@ const QuestionsPage = (props) => {
   }
       
     const isQuizComplete = questions.length !== 5;
-    const width = 350;
-    const height =  350;
+    const width = window.innerWidth;
+    const height =  window.innerHeight;
   
   return (
     <div className="QuestionsPage">
