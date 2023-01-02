@@ -72,7 +72,7 @@ const QuestionsPage = (props) => {
         <Loading background="rgb(41,50,100)" />
       ) : (
         <form>
-          {score < 5 ? <Lottie animationData={Confetti} className="confetti"/> : <></>}
+          {score === 5 ? <Lottie animationData={Confetti} className="confetti" loop={false} /> : <></>}
             {/* FIRST QUESTION */}
         <div className="question__page">
               <h4>{decode(questions[0].question)}</h4>
