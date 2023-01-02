@@ -25,7 +25,8 @@ function App() {
   const startQuiz = () => {setIsLoading(true)}
 
   return (
-    <div className="App">
+    <main>
+      <div className="App">
       {
         isLoading
         ?
@@ -42,7 +43,8 @@ function App() {
         startQuiz={startQuiz}
         isLoading={isLoading}/>
       }
-    </div>
+     </div>
+    </main>
   )
 }
 

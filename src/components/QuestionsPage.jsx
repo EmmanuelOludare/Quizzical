@@ -29,7 +29,18 @@ const QuestionsPage = (props) => {
 }
 
  const handleScoring = (event) => {
-    event.preventDefault();
+  event.preventDefault();
+  if (formData.firstQuestionOption === "") {
+    alert("Please select an option for the first question.");
+  } else if (formData.secondQuestionOption === "") {
+    alert("Please select an option for the second question.");
+  } else if (formData.thirdQuestionOption === "") {
+    alert("Please select an option for the third question.");
+  } else if (formData.fourthQuestionOption === "") {
+    alert("Please select an option for the fourth question.");
+  } else if (formData.fifthQuestionOption === "") {
+    alert("Please select an option for the fifth question.");
+  } else {
     setCompleteAnswering(true);
     if (event.target.innerHTML === `Check answers`) {
       let scoreOne,scoreTwo,scoreThree,scoreFour,scoreFive;
@@ -50,18 +61,17 @@ const QuestionsPage = (props) => {
       window.location.reload();
     }
   }
+  }
       
     const isQuizComplete = questions.length !== 5;
-    const width = 650;
-    const height =  window.innerHeight;
-  
+
   return (
     <div className="QuestionsPage">
       {isQuizComplete ? (
         <Loading background="rgb(41,50,100)" />
       ) : (
         <form>
-          {score < 5 ? <Confetti width={width} height={height} style={{zIndex: 10}}/> : <></>}
+          {score === 5 ? <Confetti /> : <></>}
             {/* FIRST QUESTION */}
         <div className="question__page">
               <h4>{decode(questions[0].question)}</h4>
