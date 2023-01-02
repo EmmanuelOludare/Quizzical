@@ -73,6 +73,10 @@ body {
   background-repeat: no-repeat, no-repeat;
 }
 
+.confetti {
+  position: absolute;
+}
+
 .question__page {
   border-bottom: 1px solid #dbdef0;
   padding: 0.6rem 0 0.6rem 0;

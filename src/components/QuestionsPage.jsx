@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, } from 'react';
+import Lottie from "lottie-react";
 import { decode } from "html-entities";
 import { Loading } from 'react-loading-dot';
-import Confetti from 'react-confetti';
+import Confetti from './confetti.json';
 
 
 const QuestionsPage = (props) => {
@@ -19,7 +20,7 @@ const QuestionsPage = (props) => {
   });
 
   function handleChange(event) {
-    const {name, value, classList} = event.target
+    const {name, value,} = event.target
     setFormData(prevFormData => {
         return {
             ...prevFormData,
@@ -71,7 +72,7 @@ const QuestionsPage = (props) => {
         <Loading background="rgb(41,50,100)" />
       ) : (
         <form>
-          {score === 5 ? <Confetti /> : <></>}
+          {score < 5 ? <Lottie animationData={Confetti} className="confetti"/> : <></>}
             {/* FIRST QUESTION */}
         <div className="question__page">
               <h4>{decode(questions[0].question)}</h4>
