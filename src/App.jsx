@@ -10,7 +10,6 @@ function App() {
   ]);
 
   useEffect(() => {
-    console.log("Effect ran")
     fetch("https://opentdb.com/api.php?amount=5&type=multiple")
     .then(res => res.json())
     .then(data => setQuestions(data.results))
