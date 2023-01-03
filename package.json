@@ -16,6 +16,7 @@
     "react-confetti": "^6.1.0",
     "react-confetti-explosion": "^1.5.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-loading-dot": "^1.0.6",
     "react-router-dom": "^5.3.4",
     "react-spinner-material": "^1.4.0"
