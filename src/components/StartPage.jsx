@@ -23,7 +23,7 @@ const StartPage = (props) => {
             <p className="description__text">created by The Hybrid</p>
             <div className="description__icons">
               <a href="https://twitter.com/michael_olu99" className="description__icon"><FaTwitter /></a>
-              <a href="https://github.com/Michaelhybrid" className="description__icon"><FaGithub /></a>
+              <a href="https://github.com/EmmanuelOludare" className="description__icon"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/oludare-emmanuel/" className="description__icon"><FaLinkedin /></a>
             </div>
             <p className="description__copyright">The Hybrid <FaCopyright />2023</p>
